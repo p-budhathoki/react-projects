@@ -1,0 +1,16 @@
+
+* {
+  /* addition */
+  outline: none;
+}
+
+html {
+  /* addition */
+  scroll-behavior: smooth;
+}
+
+/* addition */
+body {
+  background-color: #333;
+  color: whitesmoke;
+}
