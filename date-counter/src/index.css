@@ -82,3 +82,11 @@ button {
   font-size: 3rem;
   /* line-height: ; */
 }
+
+.reset {
+  width: 20rem;
+  height: 5rem;
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, .25);
+  color: whitesmoke;
+}
