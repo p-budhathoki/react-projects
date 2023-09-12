@@ -1,0 +1,68 @@
+State Management : 
+------------------
+Deciding when to create pieces of state, what types of state are necessary, where to place each piece of state and how data flows through the app.
+
+- state management is giving each piece of state a home
+
+local state
+-----------
+- state needed only by one or few components
+- state is defined in a component and only that component and child components have access to it (by passing via props)
+- we should always start with local state
+
+global state
+------------
+- state that many components might need
+- shared state that is accessible to every component in the entire application
+
+State : when and where ?
+------------------------
+when to create state
+--------------------
+- need to store data --> Will data change at some point? no--> Regular const Variable
+ 
+- need to store data --> Will data change at some point? yes--> Can be computed from existing state/props? yes--> Derived State
+
+- need to store data --> Will data change at some point? yes--> Can be computed from existing state/props? no--> Should it re-render component? no--> Ref(useRef)
+
+- need to store data --> Will data change at some point? yes--> Can be computed from existing state/props? no--> Should it re-render component? yes--> Place a new piece of state in component
+
+where to place state
+--------------------
+- Place a new piece of state in component --> Only used by this component? yes--> Leave in component
+
+- Place a new piece of state in component --> Only used by this component? no--> Also used by a child component? yes--> Pass a child via props
+
+- Place a new piece of state in component --> Only used by this component? no--> Also used by a child component? no--> Used by one or a few sibling components? yes--> Lift state up to first common parent
+
+- Place a new piece of state in component --> Only used by this component? no--> Also used by a child component? no--> Used by one or a few sibling components? no--> Probably global state 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

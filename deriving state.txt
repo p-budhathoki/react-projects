@@ -1,0 +1,14 @@
+Deriving State : 
+----------------
+- state that is computed from an existing piece of state or from props
+- just regular variables, no useState
+- cart state is the single source of truth for this related data
+- works because re-rendering component will automatically re-calculate derived state
+
+const [cart, setCart] = useState([
+ {name : "JavaScript Course", price : 15.99},
+ {name : "JavaScript Course", price : 15.99}
+]);
+
+const numItems = cart.length;
+const totalPrice = cart.reduce((acc,cur) => acc + cur.price,0);

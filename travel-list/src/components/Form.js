@@ -1,7 +1,8 @@
 import { useState } from "react";
-function Form({ onAddItems }) {
+
+export default function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
-  const [quantity, setQuantity] = useState(5);
+  const [quantity, setQuantity] = useState(1);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,15 +21,13 @@ function Form({ onAddItems }) {
       <h3>What do you need for your 😎 trip?</h3>
 
       <select
-        // name={quantity}
-        // id=""
         value={quantity}
         onChange={(e) => setQuantity(Number(e.target.value))}>
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => {
+        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
           <option value={num} key={num}>
             {num}
-          </option>;
-        })}
+          </option>
+        ))}
         {/* <option value="{1}">1</option> */}
       </select>
       <input
